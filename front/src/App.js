@@ -7,6 +7,9 @@ import ApplicationForm from "./pages/students/ApplicationForm";
 import StudentPending from "./pages/students/StudentPending";
 import StudentPast from "./pages/students/StudentPast";
 import RegisterStudent from "./pages/RegisterStudent";
+import Warden from "./pages/warden/warden";
+import WardenPending from "./pages/warden/WardenPending";
+
 
 
 function App() {
@@ -18,7 +21,9 @@ function App() {
       {/* <ApplicationForm/> */}
       {/* <StudentPending/> */}
       {/* <StudentPast /> */}
-      <RegisterStudent />
+      {/* <RegisterStudent /> */}
+      <Warden />
+     <WardenPending/>
       
     </>
   );
