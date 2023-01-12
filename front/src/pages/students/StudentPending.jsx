@@ -41,7 +41,6 @@ export default function StudentPending() {
                             </MDBCol>
                         </MDBRow>
                     </MDBCardFooter>
-
                 </MDBCard>
 
 

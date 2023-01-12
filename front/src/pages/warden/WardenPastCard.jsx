@@ -4,7 +4,7 @@ import {
   MDBCardHeader,
   MDBCardBody,
   MDBCardTitle,
-  MDBCardText, 
+  MDBCardText,
   MDBBtn,
   MDBModal,
   MDBModalDialog,
@@ -12,10 +12,10 @@ import {
   MDBModalHeader,
   MDBModalTitle,
   MDBModalBody,
-  MDBModalFooter, 
+  MDBModalFooter,
 } from 'mdb-react-ui-kit';
 import './warden.css'
-export default function WardenPendingCard() {
+export default function WardenPastCard() {
   const [centredModal, setCentredModal] = useState(false);
   const [remark, setRemark] = ("")
 

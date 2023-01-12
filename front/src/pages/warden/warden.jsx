@@ -1,57 +1,22 @@
-import React from 'react';
-import done from '../../assets/images/past.png'
-import pending from '../../assets/images/pending.png'
+import React, { useState } from 'react';
+import WardenNav from './wardenNav';
 import './warden.css'
+import WardenPending from './WardenPending';
+import WardenPast from './WardenPast';
 
 export default function Warden() {
+    let [past, setPast] = useState(true)
+    console.log(past)
     
     return (
-        <>
-            <div className='utility d-flex justify-content-center mt-4'>
+        <div className='d-flex flex-column justify-content-center'>
+            <WardenNav past={past} setPast={setPast}/>
+            {
+                past ?
+                <WardenPast/>:
+                <WardenPending/>
+            }
 
-                <div className='d-flex justify-content-center'>
-
-
-                    <div className="done  border border-dark rounded text-center d-flex flex-column  justify-content-center p-2 pt-2  mx-3" style={{ width: "110px", height: "110px" }}>
-                        <div>
-                            <img src={done} className="" style={{ width: "60px", height: "60px" }} alt="..." />
-                        </div>
-                        <a href="#" className="btn btn-outline-dark m-2 lh-1" > past</a>
-                    </div>
-                    <div className="done  border border-dark rounded text-center d-flex flex-column justify-content-center  pt-2  mx-3" style={{ width: "110px", height: "110px" }}>
-                        <div>
-                            <img src={pending} className="" style={{ width: "60px", height: "60px" }} alt="..." />
-                        </div>
-                        <a href="#" className="btn btn-outline-dark m-2 lh-1" > pending</a>
-                    </div>
-                </div>
-
-                <div className="search-sort">
-                    <div className="input-group">
-                        <div className="form-outline">
-                            <input id="search-focus" type="search" className="form-control border border-dark" />
-                            <label className="form-label" for="form1">Search</label>
-                        </div>
-                        <button type="button" className="btn btn-primary">
-                            <i className="fas fa-search"></i>
-                        </button>
-                    </div>
-
-                    <div className="dropdown">
-                        <button className="sort-btn btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                           Sort
-                        </button>
-                        <ul className="dropdown-menu">
-                            <li><button className="dropdown-item" type="button">A-Z</button></li>
-                            <li><button className="dropdown-item" type="button"></button></li>
-                            <li><button className="dropdown-item" type="button">Something else here</button></li>
-                        </ul>
-                    </div>
-                </div>
-
-
-            </div>
-
-        </>
+        </div>
     );
 }

@@ -8,7 +8,7 @@ export default function RegisterStudent() {
             <div className="form mt-4 needs-validation">
                 <div className="form-title text-center fs-2 fw-bold">
                     <p>Student Registration</p>
-                </div>
+                </div> 
 
                 <div className="registration-form">
                     <div className="container">

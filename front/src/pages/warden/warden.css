@@ -23,3 +23,31 @@
     margin-top: 22px;
   }
 }
+
+
+/* pendding card */
+@media screen and (max-width: 1300px) {
+  .pending-page {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+  }
+  .update-card {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .dropdown-status {
+    margin-bottom: 5px;
+    width: 75%;
+  }
+  .remark{
+  }
+}
+@media screen and (min-width: 1300px) {
+  .dropdown-status {
+    width: 35%;
+  }
+  
+}
